@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Oryx: One Multi-Modal LLM for On-Demand Spatial-Temporal Understanding">
+  <meta name="description" content="Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution">
 
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <!-- Keywords for your paper to be indexed by-->
@@ -13,7 +13,7 @@
 
 
   <title>Oryx</title>
-  <link rel="icon" type="image/x-icon" href="static/images/icon.webp">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -69,9 +69,9 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="columns is-centered">
+        <div class="columns is-five-sixths">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img src="static/images/icon.webp" alt="Icon" style="width: 100px; height: 100px; vertical-align: middle;"> <span style="color: rgb(247,178,106);">Oryx</span>: One Multi-Modal LLM for On-Demand Spatial-Temporal Understanding</h1>
+            <h1 class="title is-2 publication-title"><img src="static/images/icon.png" alt="Icon" style="width: 100px; height: 100px; vertical-align: middle;"> <span style="color: rgb(247,178,106);">Oryx MLLM</span>: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
                 <span class="author-block">
@@ -108,7 +108,7 @@
                   <div class="content has-text-centered">
                     <div class="publication-links">
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2404.12390.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/xxxx.xxxx.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -129,7 +129,7 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://github.com/liuzuyan/oryx" target="_blank"
+                    <a href="https://github.com/Oryx-mllm/Oryx" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -163,7 +163,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Visual data are inherently complex and diverse, ranging from small icons of just a few pixels to long videos spanning hours. Existing multi-modal LLMs usually standardize these diverse visual inputs to a fixed resolution for visual encoders and yield similar numbers of tokens for LLMs, which is non-optimal for multimodal understanding and inefficient for processing long visual content. To solve the problem, we propose the <b>Oryx</b>, a unified multimodal architecture for the spatial-temporal understanding of images, videos, and multi-view 3D scenes. Oryx offers an on-demand solution to <b>seamlessly and efficiently process visual inputs with arbitrary spatial sizes and temporal lengths</b> with two core designs: 1) a pre-trained OryxViT model that can <b>encode images at any resolution</b> into LLM-friendly visual representations; 2) a dynamic compressor module that <b>supports 1x to 16x compression on visual tokens by request</b>. Thanks to these designs, Oryx accommodates extremely long visual contexts like videos with lower resolution and high compression while maintaining high recognition precision for tasks like document understanding with native resolution and no compression. Beyond the architectural improvements, enhanced data curation and specialized training on long-context retrieval and spatial-aware data help Oryx achieve great capabilities in image, video, and 3D multimodal understanding simultaneously. 
+            Visual data comes in various forms, ranging from small icons of just a few pixels to long videos spanning hours. Existing multi-modal LLMs usually standardize these diverse visual inputs to a fixed resolution for visual encoders and yield similar numbers of tokens for LLMs, which is non-optimal for multimodal understanding and inefficient for processing long visual content. To solve the problem, we propose the <b>Oryx</b>, a unified multimodal architecture for the spatial-temporal understanding of images, videos, and multi-view 3D scenes. Oryx offers an on-demand solution to <b>seamlessly and efficiently process visual inputs with arbitrary spatial sizes and temporal lengths</b> with two core designs: 1) a pre-trained OryxViT model that can <b>encode images at any resolution</b> into LLM-friendly visual representations; 2) a dynamic compressor module that <b>supports 1x to 16x compression on visual tokens by request</b>. Thanks to these designs, Oryx accommodates extremely long visual contexts like videos with lower resolution and high compression while maintaining high recognition precision for tasks like document understanding with native resolution and no compression. Beyond the architectural improvements, enhanced data curation and specialized training on long-context retrieval and spatial-aware data help Oryx achieve great capabilities in image, video, and 3D multimodal understanding simultaneously. 
           </p>
         </div>
       </div>
@@ -172,21 +172,73 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Image carousel examples-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Examples of Oryx</h2> <br></div>
+  </div></section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <video width="100%" controls>
+                <source src="static/videos/case0.mp4" type="video/mp4">
+              </video>
+            </div>
+
+           <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case1.mp4" type="video/mp4">
+            </video>
+            <img src="static/images/answer1.png" width="100%"/>
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case2.mp4" type="video/mp4">
+          </video>
+          <img src="static/images/answer2.png" width="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case3.mp4" type="video/mp4">
+          </video>
+          <img src="static/images/answer3.png" height="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
 <!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3 has-text-centered">On-Demand Visual Perception</h2>
       <br>
-      <h2 class="subtitle has-text-justified">
-        <span style="font-weight:bold;">Coarse Correspondences  </span>
-        is a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints.</h2>
+      As illustrated in Figure 1,
+optimizing for resolution and compression can lead to greater efficiency and meet practical needs:
+high resolution is crucial for text-relevant tasks, while object-level tasks may require only simple
+images, some applications may need to summarize extremely long videos while others maintain high
+precision for each frame.
       <img src="static/images/teaser.png" height="100%"/>
       <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
-      <h2 class="hero-body">
-        <br>
-        <b>Fig 1: Overall pipeline of  <span style="font-weight:bold;">Coarse Correspondences</span>.</b> We combined light-weight video tracking models and multimodal LLMs to achieve a better understanding of 3D spacetime. (a) We use a tracking model at a high frame rate to obtain instance segmentation masks for each frame. (b) Then, we sequentially sparsify input frames, select prominent coarse correspondences, and visualize the constructed coarse correspondences on the images. (c) Finally, we enable MLLMs to better understand 3D spacetime from the prompted images.
-      </h2>
       
     </div>
   </div>
@@ -240,7 +292,7 @@
       <div class="column is-five-sixths">
         <h2 class="title is-3">General Temporal Understanding</h2>
         <h2 class="content has-text-justified">
-          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+          We conduct experiments on four multiple-choice benchmarks and three generation benchmarks comprehensively and report the main score for each dataset. Oryx exhibits superior performance under a wide range of open-sourced video MLLMs.
         </h2>
         <div class="myrow">
           <img src="static/images/results1.png" height="100%"/>
@@ -258,7 +310,7 @@
       <div class="column is-five-sixths">
         <h2 class="title is-3">Long-Form Temporal Understanding</h2>
         <h2 class="content has-text-justified">
-          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+          We show results on three mainstream longform temporal understanding datasets, each featuring video inputs of tens of minutes in duration. Oryx demonstrates superior performance, achieving state-of-the-art results and surpassing several proprietary models across various benchmarks.
         </h2>
         <div class="myrow">
           <img src="static/images/results2.png" height="100%"/>
@@ -277,7 +329,7 @@
       <div class="column is-five-sixths">
         <h2 class="title is-3">Image Understanding</h2>
         <h2 class="content has-text-justified">
-          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+          We conduct 2D spatial understanding tasks on six representative image benchmarks, including general and task-specific benchmarks. Our Oryx model achieves tier-1 performance across a wide range of MLLMs.
         </h2>
         <div class="myrow">
           <img src="static/images/results3.png" height="100%"/>
@@ -295,7 +347,7 @@
       <div class="column is-five-sixths">
         <h2 class="title is-3">3D Spatial Understanding</h2>
         <h2 class="content has-text-justified">
-          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+          We use the popular ScanQA dataset and evaluate the relevant scores. We compare the Oryx model with 3D-specific models together with general open-source MLLMs. Oryx excels in 3D spatial understanding tasks, highlighting its versatility across various applications.
         </h2>
         <div class="myrow">
           <img src="static/images/results4.png" height="100%"/>
@@ -305,59 +357,6 @@
     </div>
   </div>
 </section>
-
-<!-- Image carousel examples in BLINK-->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3">Examples of Oryx</h2> <br></div>
-      <div class="columns is-centered">
-        <div class="column is-five-sixths">
-      <h2 class="content has-text-justified">
-        We show more qualitative results of Coarse Correspondences on ScanQA and SOT. We visualize the constructed coarse correspondences on the images and show how they can help multimodal LLMs to better understand 3D spacetime. We also provide a case study to compare different prompting methods on ScanQA.
-      </h2>
-    </div></div>
-  </div></section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-           <div class="item">
-            <!-- Your image here -->
-            <video width="100%" controls>
-              <source src="static/videos/case1.mp4" type="video/mp4">
-          </video>
-          <img src="static/images/answer1.png" width="100%"/>
-          </div>
-    
-          <div class="item">
-            <!-- Your image here -->
-            <video width="100%" controls>
-              <source src="static/videos/case2.mp4" type="video/mp4">
-          </video>
-          <img src="static/images/answer2.png" width="100%"/>
-                        <!-- <h2 class="subtitle has-text-centered">
-              Example case from <b>BLINK</b> and GPT-4V prediction.
-            </h2> -->
-          </div>
-    
-          <div class="item">
-            <!-- Your image here -->
-            <video width="100%" controls>
-              <source src="static/videos/case3.mp4" type="video/mp4">
-          </video>
-          <img src="static/images/answer3.png" height="100%"/>
-                        <!-- <h2 class="subtitle has-text-centered">
-              Example case from <b>BLINK</b> and GPT-4V prediction.
-            </h2> -->
-          </div>
-    
-          </div>
-        </div>
-  </div>
-</section>
-<!-- End image carousel -->
 
 
 <!--BibTex citation -->

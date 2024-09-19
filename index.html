@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Oryx: One Multi-Modal LLM for On-Demand Spatial-Temporal Understanding">
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Vision-Language Model, Multi-modal LLM, Spatial-Temporal Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Oryx</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.webp">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yushi-hu.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://finegrainedrlhf.github.io/">
+            Fine-Grained RLHF (NeurIPS 2023)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="static/images/icon.webp" alt="Icon" style="width: 100px; height: 100px; vertical-align: middle;"> <span style="color: rgb(247,178,106);">Oryx</span>: One Multi-Modal LLM for On-Demand Spatial-Temporal Understanding</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href='https://github.com/liuzuyan' target="_blank"><font color="#B082C9"><b>Zuyan Liu</b></font></a><sup>1,2,*</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=kMui170AAAAJ" target="_blank"><font color="#B082C9"><b>Yuhao Dong</b></font></a><sup>2,3,*</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://liuziwei7.github.io/" target="_blank"><font color="#B082C9"><b>Ziwei Liu</b></font></a><sup>3</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <font color="#B082C9"><b>Winston Hu</b></font></a><sup>2</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=TN8uDQoAAAAJ&hl=en" target="_blank"><font color="#B082C9"><b>Jiwen Lu</b></font></a><sup>1</sup>&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="https://raoyongming.github.io/" target="_blank"><font color="#B082C9"><b>Yongming Rao</b></font></a><sup>2,1</sup>&emsp;
+                </span>
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>Tsinghua University&emsp;
+                      <sup>2</sup>Tencent&emsp;
+                      <sup>3</sup>S-Lab, NTU&emsp;
+                      <sup>*</sup>Equal Contribution&emsp;
+                    </span>
+                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="content has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2404.12390.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <span class="link-block">
+                      <a href="https://huggingface.co/collections/THUdyh/oryx-66ebe5d0cfb61a2837a103ff" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa fa-database"></i>
+                      </span>
+                      <span>Model Checkpoint</span>
+                    </a>
+                  </span>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/liuzuyan/oryx" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                  </span>
+
+                <span class="link-block">
+                  <a href="https://twitter.com/XingyuFu2/status/1781368539213082683" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Twitter</span>
+                  </a>
+                </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Visual data are inherently complex and diverse, ranging from small icons of just a few pixels to long videos spanning hours. Existing multi-modal LLMs usually standardize these diverse visual inputs to a fixed resolution for visual encoders and yield similar numbers of tokens for LLMs, which is non-optimal for multimodal understanding and inefficient for processing long visual content. To solve the problem, we propose the <b>Oryx</b>, a unified multimodal architecture for the spatial-temporal understanding of images, videos, and multi-view 3D scenes. Oryx offers an on-demand solution to <b>seamlessly and efficiently process visual inputs with arbitrary spatial sizes and temporal lengths</b> with two core designs: 1) a pre-trained OryxViT model that can <b>encode images at any resolution</b> into LLM-friendly visual representations; 2) a dynamic compressor module that <b>supports 1x to 16x compression on visual tokens by request</b>. Thanks to these designs, Oryx accommodates extremely long visual contexts like videos with lower resolution and high compression while maintaining high recognition precision for tasks like document understanding with native resolution and no compression. Beyond the architectural improvements, enhanced data curation and specialized training on long-context retrieval and spatial-aware data help Oryx achieve great capabilities in image, video, and 3D multimodal understanding simultaneously. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">On-Demand Visual Perception</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        <span style="font-weight:bold;">Coarse Correspondences  </span>
+        is a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints.</h2>
+      <img src="static/images/teaser.png" height="100%"/>
+      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+      <h2 class="hero-body">
+        <br>
+        <b>Fig 1: Overall pipeline of  <span style="font-weight:bold;">Coarse Correspondences</span>.</b> We combined light-weight video tracking models and multimodal LLMs to achieve a better understanding of 3D spacetime. (a) We use a tracking model at a high frame rate to obtain instance segmentation masks for each frame. (b) Then, we sequentially sparsify input frames, select prominent coarse correspondences, and visualize the constructed coarse correspondences on the images. (c) Finally, we enable MLLMs to better understand 3D spacetime from the prompted images.
+      </h2>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Brief video introduction about <span style="font-weight:bold;">BLINK Benchmark.</span>. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- BLINK Comparison -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Oryx Architecture</h2>
+        <!-- <h2 class="title is-3">BLINK Benchmark -- Unique Features of BLINK?</h2> -->
+        <h2 class="content has-text-justified">
+          Oryx includes: 1) A well-trained visual encoder OryxViT that flexibly modifies the positional embedding layer and
+          employs variable-length self-attention to process visual tokens in batches, thereby generating LLM-
+          friendly visual representations at native resolutions. 2) Dynamic compression technique that adjusts
+          downsampling ratios arbitrarily while fusing the information through a shared projector, thereby
+          supporting extremely long inputs with up to 16x downsampling while maintaining the precision
+          for low compression without increasing the overall token length.
+        </h2>
+        <img src="static/images/method.png" height="100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Paper Qualitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">General Temporal Understanding</h2>
+        <h2 class="content has-text-justified">
+          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+        </h2>
+        <div class="myrow">
+          <img src="static/images/results1.png" height="100%"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper Qualitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Long-Form Temporal Understanding</h2>
+        <h2 class="content has-text-justified">
+          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+        </h2>
+        <div class="myrow">
+          <img src="static/images/results2.png" height="100%"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper Qualitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Image Understanding</h2>
+        <h2 class="content has-text-justified">
+          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+        </h2>
+        <div class="myrow">
+          <img src="static/images/results3.png" height="100%"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper Qualitative -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">3D Spatial Understanding</h2>
+        <h2 class="content has-text-justified">
+          For temporal understanding, we choose egoschema, a widely used dataset which aims at benchmarking a model's long video understanding ability. We limit this evaluation to 500 questions from the validation set. For the GPT models' input, we sample 8 frames uniformly from the video input.
+        </h2>
+        <div class="myrow">
+          <img src="static/images/results4.png" height="100%"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel examples in BLINK-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Examples of Oryx</h2> <br></div>
+      <div class="columns is-centered">
+        <div class="column is-five-sixths">
+      <h2 class="content has-text-justified">
+        We show more qualitative results of Coarse Correspondences on ScanQA and SOT. We visualize the constructed coarse correspondences on the images and show how they can help multimodal LLMs to better understand 3D spacetime. We also provide a case study to compare different prompting methods on ScanQA.
+      </h2>
+    </div></div>
+  </div></section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+           <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case1.mp4" type="video/mp4">
+          </video>
+          <img src="static/images/answer1.png" width="100%"/>
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case2.mp4" type="video/mp4">
+          </video>
+          <img src="static/images/answer2.png" width="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          <div class="item">
+            <!-- Your image here -->
+            <video width="100%" controls>
+              <source src="static/videos/case3.mp4" type="video/mp4">
+          </video>
+          <img src="static/images/answer3.png" height="100%"/>
+                        <!-- <h2 class="subtitle has-text-centered">
+              Example case from <b>BLINK</b> and GPT-4V prediction.
+            </h2> -->
+          </div>
+    
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
